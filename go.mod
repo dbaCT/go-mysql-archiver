@@ -1,4 +1,4 @@
-module github.com/dbadylan/go-mysql-archiver
+module github.com/dbaCT/go-mysql-archiver
 
 go 1.17
 

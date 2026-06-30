@@ -9,8 +9,8 @@ import (
 	"sync"
 	"time"
 
-	"github.com/dbadylan/go-mysql-archiver/internal/config"
-	"github.com/dbadylan/go-mysql-archiver/internal/data"
+	"github.com/dbaCT/go-mysql-archiver/internal/config"
+	"github.com/dbaCT/go-mysql-archiver/internal/data"
 )
 
 func Run(cfg *config.Config) (err error) {

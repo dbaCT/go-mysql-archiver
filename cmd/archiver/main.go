@@ -3,8 +3,8 @@ package main
 import (
 	"fmt"
 
-	"github.com/dbadylan/go-mysql-archiver/internal/biz"
-	"github.com/dbadylan/go-mysql-archiver/internal/config"
+	"github.com/dbaCT/go-mysql-archiver/internal/biz"
+	"github.com/dbaCT/go-mysql-archiver/internal/config"
 )
 
 func main() {

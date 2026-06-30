@@ -16,7 +16,7 @@
 ## 编译
 
 ```shell
-git clone https://github.com/dbadylan/go-mysql-archiver.git
+git clone https://github.com/dbaCT/go-mysql-archiver.git
 cd go-mysql-archiver/cmd/archiver/
 go build
 ./archiver -h

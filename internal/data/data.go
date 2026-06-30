@@ -8,7 +8,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/dbadylan/go-mysql-archiver/internal/config"
+	"github.com/dbaCT/go-mysql-archiver/internal/config"
 
 	_ "github.com/go-sql-driver/mysql"
 )
@@ -77,7 +77,8 @@ func explain(db *sql.DB, table string, where string) (keyName string, rowsEstima
 }
 
 // getOneUniqueKey
-//  try to get a non-nullable unique key, include primary key
+//
+//	try to get a non-nullable unique key, include primary key
 func getOneUniqueKey(db *sql.DB, database string, table string) (exist bool, columns []string, positions []int, err error) {
 	query := `SELECT /* go-mysql-archiver */ CONVERT(CONCAT('[', GROUP_CONCAT(CONCAT('"', c.COLUMN_NAME, '"') ORDER BY s.SEQ_IN_INDEX), ']'), JSON) columns, CONVERT(CONCAT('[', GROUP_CONCAT(c.ORDINAL_POSITION-1 ORDER BY s.SEQ_IN_INDEX), ']'), JSON) positions, MAX(NON_UNIQUE) non_unique, MAX(NULLABLE) nullable, MAX(CARDINALITY) cardinality
 FROM information_schema.STATISTICS s
